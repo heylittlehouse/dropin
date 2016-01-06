@@ -26,6 +26,8 @@ group :development, :test do
   gem 'byebug'
   # Use Rspec as testing harness
   gem 'rspec-rails', '~> 3.0'
+  # Test associations and validations with shoulda matchers
+  gem 'shoulda-matchers'
 end
 
 group :development do
