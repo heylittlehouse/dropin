@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20160106202009) do
   end
 
   create_table "events_tags", force: :cascade do |t|
+    t.integer  "event_id",   null: false
+    t.integer  "tag_id",     null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
