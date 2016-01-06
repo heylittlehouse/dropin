@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Event, type: :model do
 	context "associations" do
-    it {should have_many :hosted_events}
-    it {should have_many :attended_events}
-    it {should have_many :interests}
+    it {should have_many :tags}
+    it {should have_many :attendees}
+    it {should belong_to :host}
   end
 
 end
