@@ -28,6 +28,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   # Test associations and validations with shoulda matchers
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -38,9 +39,5 @@ group :development do
   gem 'spring'
 
 
-end
-
-group :test do 
-  gem 'database_cleaner'
 end
 

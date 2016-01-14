@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
   	end
 
   	context "uniqueness" do
-	    User.new(first_name: 'Michael', last_name: 'Landon', password_digest: 'whatever', email: 'test@something.com').save!(validate: false)
+	    subject { User.new(first_name: 'Michael', last_name: 'Landon', password_digest: 'whatever') }
 	    # this method requires an instance in the db to work.
 	    # otherwise not_null constraints of first_name, for example, get violated
 	    it {should validate_uniqueness_of :email}
