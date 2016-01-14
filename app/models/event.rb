@@ -4,4 +4,6 @@ class Event < ActiveRecord::Base
 	has_many :tags, through: :events_tags
 	has_many :events_users
 	has_many :attendees, through: :events_users, source: :user
+
+	validates :user_id, :latitude, :longitude, :start_time, :end_time, presence: true
 end
